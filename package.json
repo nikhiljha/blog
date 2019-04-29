@@ -27,6 +27,7 @@
     "gulp-image-resize": "^0.13.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
+    "highlight.js": "^9.15.6",
     "html-minifier": "^4.0.0",
     "luxon": "^1.12.1",
     "netlify-lambda": "^1.4.5",

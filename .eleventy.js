@@ -6,6 +6,26 @@ module.exports = function(config) {
   // A useful way to reference to the contect we are runing eleventy in
   let env = process.env.ELEVENTY_ENV;
 
+  var hljs = require('highlight.js'); // https://highlightjs.org/
+
+  // Actual default values
+  var md = require('markdown-it')({
+    html: true,
+    breaks: true,
+    highlight: function (str, lang) {
+      if (lang && hljs.getLanguage(lang)) {
+      try {
+        return '<pre class="hljs"><code>' +
+                 hljs.highlight(lang, str, true).value +
+                 '</code></pre>';
+        } catch (__) {}
+      }
+      return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+    }
+  });
+
+  config.setLibrary("md", md);
+
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
 
