@@ -84,8 +84,6 @@ Most SBCs come with Ubuntu and a preconfigured user. To avoid getting confused a
 After SSHing in with the default login and switching to root...
 
 ```bash
-# Basic Setup
-
 # Change hostname
 echo MY_HOSTNAME > /etc/hostname
 hostname MY_HOSTNAME

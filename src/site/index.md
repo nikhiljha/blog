@@ -4,7 +4,6 @@ subtitle: A student, maker, and more from California.
 layout: layouts/base.njk
 ---
 
-
 ## What is this website?
 
 On this website you'll find...

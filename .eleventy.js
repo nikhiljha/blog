@@ -3,15 +3,11 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(config) {
 
-  // A useful way to reference to the contect we are runing eleventy in
-  let env = process.env.ELEVENTY_ENV;
-
-  var hljs = require('highlight.js'); // https://highlightjs.org/
-
-  // Actual default values
+  // Markdown configuration
+  var hljs = require('highlight.js');
   var md = require('markdown-it')({
     html: true,
-    breaks: true,
+    breaks: false,
     highlight: function (str, lang) {
       if (lang && hljs.getLanguage(lang)) {
       try {
@@ -20,16 +16,15 @@ module.exports = function(config) {
                  '</code></pre>';
         } catch (__) {}
       }
-      return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+      return md.utils.escapeHtml(str);
     }
   });
-
   config.setLibrary("md", md);
 
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
 
-  // Add some utiliuty filters
+  // Utility Filters
   config.addFilter("squash", require("./src/filters/squash.js") );
   config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
     return DateTime.fromJSDate(dateObj, {
@@ -38,22 +33,19 @@ module.exports = function(config) {
   });
   config.addPlugin(pluginRss);
 
-  // minify the html output
+  // Minify HTML
   config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
 
-
-  // pass some assets right through
+  // Assets
   config.addPassthroughCopy("./src/site/images");
   config.addPassthroughCopy("./src/site/school");
   config.addPassthroughCopy("./src/site/keybase.txt");
 
-  // make the seed target act like prod
-  env = (env=="seed") ? "prod" : env;
   return {
     dir: {
       input: "src/site",
       output: "dist",
-      data: `_data/${env}`
+      data: `_data`
     },
     templateFormats : ["njk", "md"],
     htmlTemplateEngine : "njk",
