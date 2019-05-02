@@ -6,8 +6,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "yarn run dev",
-    "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve & yarn run dev:functions",
-    "build": "gulp build & ELEVENTY_ENV=dev eleventy && yarn run build:functions",
+    "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve",
+    "build": "gulp build & ELEVENTY_ENV=dev eleventy",
     "seed": "gulp build & ELEVENTY_ENV=seed eleventy",
     "build:functions": "netlify-lambda build src/lambda",
     "dev:functions": "netlify-lambda serve src/lambda"
@@ -29,7 +29,9 @@
     "gulp-uglify": "^3.0.2",
     "highlight.js": "^9.15.6",
     "html-minifier": "^4.0.0",
+    "katex": "^0.10.1",
     "luxon": "^1.12.1",
+    "markdown-it-texmath": "^0.5.5",
     "netlify-lambda": "^1.4.5",
     "require-dir": "^1.2.0",
     "terser": "3.17.0",

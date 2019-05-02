@@ -3,9 +3,11 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(config) {
 
-  // Markdown configuration
-  var hljs = require('highlight.js');
-  var md = require('markdown-it')({
+  // Markdown Configuration
+  let hljs = require('highlight.js'); // Code Highlighting
+  let katex = require('katex'); // Latex
+  let texmath = require('markdown-it-texmath').use(katex);
+  let md = require('markdown-it')({
     html: true,
     breaks: false,
     highlight: function (str, lang) {
@@ -18,7 +20,7 @@ module.exports = function(config) {
       }
       return md.utils.escapeHtml(str);
     }
-  });
+  }).use(texmath,{delimiters:'dollars'});
   config.setLibrary("md", md);
 
   // Layout aliases can make templates more portable
@@ -39,6 +41,7 @@ module.exports = function(config) {
   // Assets
   config.addPassthroughCopy("./src/site/images");
   config.addPassthroughCopy("./src/site/school");
+  config.addPassthroughCopy("./src/site/school/guerrasucia/index.html");
   config.addPassthroughCopy("./src/site/keybase.txt");
 
   return {
@@ -47,7 +50,6 @@ module.exports = function(config) {
       output: "dist",
       data: `_data`
     },
-    templateFormats : ["njk", "md"],
     htmlTemplateEngine : "njk",
     markdownTemplateEngine : "njk",
     passthroughFileCopy: true
