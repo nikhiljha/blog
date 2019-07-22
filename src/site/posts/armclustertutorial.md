@@ -3,7 +3,7 @@ title: "ARM Clusters + Selfhosting: A Perfect Match"
 date: 2019-05-01
 ---
 
-![Cluster Diagram](/images/2019/ClusterDiagram.svg)
+<img src="/images/2019/ClusterDiagram.svg" alt="Cluster Diagram" class="invert">
 
 In this article, I'll go over the pros and cons of a single `x86_64` server vs an `ARM` Cluster, as well as show you how you can set up your own ARM Cluster with Docker Swarm, GlusterFS, Traefik, and Ansible. I focused on achieving a balance between ease of setup, ease of use, and computing power. If you have any ideas about how to make things *even easier*, email me.
 
