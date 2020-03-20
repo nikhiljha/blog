@@ -4,7 +4,13 @@ layout: layouts/base.njk
 subtitle: A non-exhaustive list of my projects.
 ---
 
-This list is, by no means, extensive. It doesn't even neccesarily contain the most important projects. That said, here they are.
+I unfortunately haven't been updating this as much as I should have. Some important things might be left out :(
+
+<h2>Fedora Port for PinePhone (<a href="https://github.com/nikhiljha/pp-fedora-sdsetup">Git</a> or <a href="https://fedoraproject.org/wiki/Architectures/ARM/PinePhone">Wiki</a>)</h2>
+
+<center><blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">Today I got <a href="https://twitter.com/hashtag/fedora?src=hash&amp;ref_src=twsrc%5Etfw">#fedora</a> running on my <a href="https://twitter.com/thepine64?ref_src=twsrc%5Etfw">@thepine64</a> <a href="https://twitter.com/hashtag/pinephone?src=hash&amp;ref_src=twsrc%5Etfw">#pinephone</a>.<br><br>(Lots of help from mozzwald on Discord, using megi&#39;s 5.6 kernel.) <a href="https://t.co/qFkOcZPnCA">pic.twitter.com/qFkOcZPnCA</a></p>&mdash; Nikhil Jha (@jhanikhil) <a href="https://twitter.com/jhanikhil/status/1229270316053958657?ref_src=twsrc%5Etfw">February 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+
+[Someone](https://github.com/Torbuntu) *really* wanted to run Fedora on their PinePhone. I also use Fedora, so I began laying the groundwork to get Fedora to run on the PinePhone. Currently: calls, mobile data, and texts all work, so it's basically usable if you can look past the bugs. I'm currently working with people to get everything into upstream Fedora.
 
 <h2>Portola App (<a href="https://gitlab.com/appteamepic/portolapp-x">Git</a>)</h2><br>
 
@@ -30,10 +36,13 @@ Decentralized websites and applications shouldn’t have to rely on the outworn 
 Meet NEMid, a secure way to sign in for the modern era. Using secure public key cryptography, NEMid can sign you into compatible websites and apps with only a NEM account through a standalone application.
 
 <h2>Things to add to this list...</h2>
-- Harry Potter Wand RE
+
+- Jeopardy Quiz for Telegram
+- Car GPS Anti-theft (+ Statistics)
+- Status [Website](https://epicteam.app/) | [App](http://bit.ly/thestatusapp) | [Chrome Extension](http://bit.ly/statuschrome)
 - Wizard File Transfer
-- everychat.app
+- everychat.app + tsukuru.club
 
 <h2>More..?</h2>
 
-I have a few other projects. You might be able to find them on the blog, or at [tsukuru.club](https://tsukuru.club/). I'll try to keep this page updated as much as possible though, but smaller projects definitely won't make the cut.
+I unfortunately haven't been updating this as much as I should have. Some important things might be left out. You might be able to find them on the blog, twitter, or at [tsukuru.club](https://tsukuru.club/).

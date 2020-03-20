@@ -4,15 +4,17 @@ subtitle: A student, maker, and more from California.
 layout: layouts/base.njk
 ---
 
+## Who am I?
+
+Not entirely sure, but I'll figure it out.
+
 ## What is this website?
 
-On this website you'll find...
+This is my personal website! Here, you might find...
 
 - Blog posts
-- Cool demos (not linked)
-- Past Projects
+- Demos
+- Projects
 - ... more?
 
-I moved from Hexo > Wordpress > 11ty very recently, so things are still baking.
-
-<p class="dark_notifier">Because of your system (or browser) configuration, this website is being displayed in <b>dark mode</b>. Images may be displayed with inverted colors.</p>
+<p class="dark_notifier">Because of your system (or browser) configuration, this website is being displayed in <b>dark mode</b>. Images may be displayed with inverted colors where appropriate.</p>
