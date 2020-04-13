@@ -42,7 +42,7 @@ Use a screenshot tool built into your browser or ShareX. The screenshots must ma
 
 ## Converting Map Tiles to Minecraft Blocks
 
-Someone already made a [web-based tool](https://minecraftart.netlify.com/) ([git](https://github.com/Explodey54/minecraft-artifier-js)) to do this! Upload your screenshot, and input the corresponding width in meters. Remember, one block is one meter. If the resulting height matches your measured height, you measured everything correctly! Good job!
+Someone already made a [web-based tool](https://minecraftart.netlify.com/) ([git](https://github.com/Explodey54/minecraft-artifier-js)) to do this. Upload your screenshot, and input the corresponding width in meters. Remember, one block is one meter. If the resulting height matches your measured height, you measured everything correctly. Good job!
 
 If your build is more than 256 meters in either direction, you'll need to check the "ignore height limit" box. All other settings are up to personal preference.
 
@@ -56,7 +56,7 @@ The output is a map on its side instead of flat on the ground.
 
 Oh boy. I thought this would be easy too. Use [WorldEdit](https://worldedit.enginehub.org/en/latest/)'s rotate command and you're good to go.
 
-... except WorldEdit doesn't let you rotate blocks on the y-axis
+… except WorldEdit doesn't let you rotate blocks on the y-axis
 
 But wait! It actually does! It's [completely undocumented](https://worldedit.enginehub.org/en/latest/usage/clipboard/), and the only reference to this feature is the [least-upvoted answer on an old StackOverflow post](https://gaming.stackexchange.com/a/225403).
 
