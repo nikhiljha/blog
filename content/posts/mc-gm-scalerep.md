@@ -16,7 +16,7 @@ Google Maps has two types of promising data: 3D models of buildings, and satelli
 
 As a result, the initial conversions to Minecraft blocks didn't look great. Here's a model my friend [Justin](https://recyclebin.net/) generated. It's supposed to be his high school, but it's hard to tell.
 
-![Minecraft Screenshot of jumbled iron blocks](/images/2020/minecraft/justin-try1.png)
+![Minecraft Screenshot of jumbled iron blocks](/images/2020/minecraft/justin-try1.jpg)
 
 Justin ended up building his school manually, and it looks really good.
 
