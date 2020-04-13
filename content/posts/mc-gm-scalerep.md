@@ -12,15 +12,15 @@ Thanks to [the current situation](https://en.wikipedia.org/wiki/2019%E2%80%9320_
 
 Google Maps has two types of promising data: 3D models of buildings, and satellite imagery. My first thought was to rip 3D model data from Google Maps. People [have done this before](https://youtu.be/X6Q7dbtXVZQ). Converting a model to Minecraft blocks [isn't hard either](https://github.com/MrCheeze/obj2mc). Unfortunately, the ripped models are low quality. Even as a starting point, you'd be better off building from scratch.
 
-![Blender Screenshot with a School 3D Model](/images/2020/justin-blender.jpg)
+![Blender Screenshot with a School 3D Model](/images/2020/minecraft/justin-blender.jpg)
 
 As a result, the initial conversions to Minecraft blocks didn't look great. Here's a model my friend [Justin](https://recyclebin.net/) generated. It's supposed to be his high school, but it's hard to tell.
 
-![Minecraft Screenshot of jumbled iron blocks](/images/2020/justin-3d.png)
+![Minecraft Screenshot of jumbled iron blocks](/images/2020/minecraft/justin-try1.png)
 
 Justin ended up building his school manually, and it looks really good.
 
-![Minecraft Screenshot of Justin's School](/images/2020/justin-manual.jpg)
+![Minecraft Screenshot of Justin's School](/images/2020/minecraft/justin-manual.jpg)
 
 It may be possible to salvage the Google Maps 3D object with a smart algorithm. However, I think manual builds would look nicer.
 
@@ -28,7 +28,7 @@ That brings us to the second type of data: satellite imagery. This is pretty str
 
 ## Getting Map Tiles
 
-![google maps screenshot of my school](/images/2020/portola-google-maps.jpg)
+![google maps screenshot of my school](/images/2020/minecraft/portola-gm.jpg)
 
 It's pretty easy to rip map tiles from Google Maps. I was lazy and took a screenshot instead. If your build is small enough (less than 600m^2), you can do the same.
 
@@ -46,7 +46,7 @@ Someone already made a [web-based tool](https://minecraftart.netlify.com/) ([git
 
 If your build is more than 256 meters in either direction, you'll need to check the "ignore height limit" box. All other settings are up to personal preference.
 
-![web tool interface](/images/2020/portola-web-tool.jpg)
+![web tool interface](/images/2020/minecraft/web-tool.jpg)
 
 The output is a map on its side instead of flat on the ground.
 
@@ -97,7 +97,7 @@ Figuring out how to rip higher quality 3D models could make this a lot easier. P
 
 ## Pictures
 
-![minecraft screenshot of my school](/images/2020/minecraft/build-2.jpg)
-![minecraft screenshot of my school](/images/2020/minecraft/build-1.jpg)
-![minecraft screenshot of my school](/images/2020/minecraft/build-3.jpg)
-![minecraft screenshot of my school](/images/2020/minecraft/build-4.jpg)
+![minecraft screenshot of my school](/images/2020/minecraft/ss-2.jpg)
+![minecraft screenshot of my school](/images/2020/minecraft/ss-1.jpg)
+![minecraft screenshot of my school](/images/2020/minecraft/ss-3.jpg)
+![minecraft screenshot of my school](/images/2020/minecraft/ss-4.jpg)
