@@ -1,0 +1,14 @@
+{% extends "page.html" %}
+
+{% block content %}
+  <p>Feed available in <a href="{{ get_url(path="rss.xml") }}">RSS</a> format.</p>
+
+  <ul class="listing">
+  {% for page in section.pages | sort(attribute="date") | reverse %}
+    <li>
+      <a href="{{ page.permalink }}">{{ page.title }}</a> -
+      <time datetime="{{ page.date }}">{{ page.date | date(format="%h %e, %Y") }}</time>
+    </li>
+  {% endfor %}
+  </ul>
+{% endblock content %}
