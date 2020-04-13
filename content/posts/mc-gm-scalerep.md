@@ -97,7 +97,7 @@ Figuring out how to rip higher quality 3D models could make this a lot easier. P
 
 ## Pictures
 
-![minecraft screenshot of my school](/images/2020/minecraft/ss-2.jpg)
-![minecraft screenshot of my school](/images/2020/minecraft/ss-1.jpg)
-![minecraft screenshot of my school](/images/2020/minecraft/ss-3.jpg)
-![minecraft screenshot of my school](/images/2020/minecraft/ss-4.jpg)
+![Minecraft screenshot of my school](/images/2020/minecraft/ss-2.jpg)
+![Minecraft screenshot of my school](/images/2020/minecraft/ss-1.jpg)
+![Minecraft screenshot of my school](/images/2020/minecraft/ss-3.jpg)
+![Minecraft screenshot of my school](/images/2020/minecraft/ss-4.jpg)
