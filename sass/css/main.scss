@@ -17,7 +17,7 @@
   }
 
   html {
-    background-color: $accent-color;
+    background-color: $page-color;
     width: 100%;
     overflow-x: hidden;
   }
@@ -173,14 +173,24 @@
       border-bottom: solid 1px $text-color;
     }
   }
+
+  pre {
+    padding-left: 0.75em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .accent-text {
+    color: $accent-color
+  }
 }
 
-@include styling($text-color: $text-color-light, $page-color: $page-color-light, $accent-color: $accent-color);
+@include styling($text-color: $text-color-light, $page-color: $page-color-light, $accent-color: $accent-color-light);
 .dark_notifier {
   visibility: hidden;
 }
 @media all and (prefers-color-scheme: dark) {
-  @include styling($text-color: $text-color-dark, $page-color: $page-color-dark, $accent-color: $accent-color);
+  @include styling($text-color: $text-color-dark, $page-color: $page-color-dark, $accent-color: $accent-color-dark);
   .dark_notifier {
     visibility: visible;
   }
