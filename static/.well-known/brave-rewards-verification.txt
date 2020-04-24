@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: nikhiljha.com
+Token: 07e920635be504b633755c61c748959b3a28ff9f2925198b40f9b09fd9244cc5
