@@ -6,12 +6,11 @@ layout = "page.html"
 
 ## <span class="accent-text">$</span> whoami
 
-I'm a person (not a robot). I do cool things sometimes! I currently go to Portola High School, but
-will be attending UC Berkeley starting Fall 2020. See the footer of this page for contact information.
+I do cool things (Linux, ARM, AppDev, Blender, Crypto*) sometimes, and normal things (sleeping, eating, playing games) other times. I will be attending <span title="go bears">UC Berkeley</span> starting Fall 2020, and am a little sad that I can't go and meet everyone [in person](https://en.wikipedia.org/wiki/COVID-19_pandemic). :(
 
 ## <span class="accent-text">$</span> whatis nikhiljha.com
 
-This is my personal website! Here, you might find...
+This is my personal website! It's always getting <s>worse</s> better. Here, you can find...
 
 - [Blog posts](/posts)
 - Demos

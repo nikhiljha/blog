@@ -44,7 +44,7 @@
   }
 
 
-  .container {
+  body {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -187,7 +187,7 @@
 
 @include styling($text-color: $text-color-light, $page-color: $page-color-light, $accent-color: $accent-color-light);
 .dark_notifier {
-  visibility: hidden;
+  display: none;
 }
 @media all and (prefers-color-scheme: dark) {
   @include styling($text-color: $text-color-dark, $page-color: $page-color-dark, $accent-color: $accent-color-dark);
