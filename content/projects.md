@@ -3,6 +3,8 @@ title = "Projects"
 description = "A non-exhaustive list of my projects."
 +++
 
+# Projects
+
 I unfortunately haven't been updating this as much as I should have. Some important things might be left out :(
 
 ## Fedora Port for PinePhone | [Git](https://github.com/nikhiljha/pp-fedora-sdsetup) | [Wiki](https://fedoraproject.org/wiki/Architectures/ARM/PinePhone)

@@ -66,16 +66,16 @@
     line-height: 1;
   }
   h1 {
-    font-size: 3em;
+    font-size: 2em;
     margin-top:0.4em;
     margin-bottom:0.2em;
     line-height: 1;
 
     @include bp(mid) {
-      font-size: 5em;
+      font-size: 4em;
     }
     @include bp(wide) {
-      font-size: 6em;
+      font-size: 5em;
     }
   }
 
