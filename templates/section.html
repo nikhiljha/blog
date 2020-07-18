@@ -1,9 +1,12 @@
 {% extends "page.html" %}
 
 {% block content %}
-  <h1 class="p-name">{{ page.title }}</h1>
+{%- if page.title == "Posts" %}
+<main class="main section">
+  <section class="content container">
+  <h1>{{ page.title }}</h1>
 
-  <p>An <a href="{{ get_url(path="rss.xml") }}">RSS feed</a> is available.</p>
+  <p>An <a href="{{ get_url(path="rss.xml") }}">RSS feed</a> is available :)</p>
 
   {% for year, posts in section.pages | sort(attribute="date") | reverse | group_by(attribute="year") %}
     <h2>{{ year }}</h2>
@@ -18,5 +21,24 @@
     {% endfor %}
     
   {% endfor %}
-
+  </section>
+</main>
+{% else %}
+<main class="main section">
+  <section class="content container">
+    <h1>Projects</h1>
+    <div class="tile is-ancestor">
+    {% for post in section.pages | sort(attribute="date") | reverse %}
+      <div class="tile is-vertical is-parent is-4">
+        <article class="tile is-child box">
+          <div class="content">
+            {{ post.content | safe }}
+          </div>
+        </article>
+      </div>
+    {% endfor %}
+    </div>
+  </section>
+</main>
+{% endif %}
 {% endblock content %}
