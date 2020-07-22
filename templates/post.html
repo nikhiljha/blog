@@ -8,7 +8,8 @@
     {%- if page.description %}<p class="subtitle p-summary">{{ page.description }}</p>{% endif %}
     <p>
       <a class="p-author h-card" href="https://nikhiljha.com/">Nikhil Jha</a> | 
-      <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date(format="%h %e, %Y") }}</time>
+      <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date(format="%h %e, %Y") }}</time> |
+      {{ page.reading_time }} minute read
     </p>
     <hr class="divider background-primary">
     <div class="e-content">
