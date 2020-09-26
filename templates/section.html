@@ -3,14 +3,14 @@
 {% block content %}
 {%- if page.title == "Posts" %}
 <main class="main section">
-  <section class="content container">
+  <section class="content container is-medium">
   <h1>{{ page.title }}</h1>
 
   <p>An <a href="{{ get_url(path="rss.xml") }}">RSS feed</a> is available :)</p>
 
   {% for year, posts in section.pages | sort(attribute="date") | reverse | group_by(attribute="year") %}
     <h2>{{ year }}</h2>
-    
+
     {% for post in posts %}
       <ul class="listing">
       <li>
@@ -19,13 +19,13 @@
       </li>
     </ul>
     {% endfor %}
-    
+
   {% endfor %}
   </section>
 </main>
 {% else %}
 <main class="main section">
-  <section class="content container">
+  <section class="content container is-medium">
     <h1>Projects</h1>
     <div class="tile is-ancestor">
     {% for post in section.pages | sort(attribute="date") | reverse %}

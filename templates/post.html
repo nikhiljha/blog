@@ -2,20 +2,20 @@
 
 {% block content %}
 <main class="main section">
-  <section class="content container">
-  <article class="h-entry">
-    <h1 class="p-name display-title display-title-xxl">{{ page.title }}</h1>
-    {%- if page.description %}<p class="subtitle p-summary">{{ page.description }}</p>{% endif %}
-    <p>
-      <a class="p-author h-card" href="https://nikhiljha.com/">Nikhil Jha</a> | 
-      <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date(format="%h %e, %Y") }}</time> |
-      {{ page.reading_time }} minute read
-    </p>
-    <hr class="divider background-primary">
-    <div class="e-content">
-      {{ page.content | safe }}
-    </div>
-  </article>
-</section>
+  <section class="content container is-medium">
+    <article class="h-entry">
+      <h1 class="p-name display-title display-title-xxl">{{ page.title }}</h1>
+      {%- if page.description %}<p class="subtitle p-summary">{{ page.description }}</p>{% endif %}
+      <p>
+        <a class="p-author h-card" href="https://nikhiljha.com/">Nikhil Jha</a> |
+        <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date(format="%h %e, %Y") }}</time> |
+        {{ page.reading_time }} minute read
+      </p>
+      <hr class="divider background-primary">
+      <div class="e-content">
+        {{ page.content | safe }}
+      </div>
+    </article>
+  </section>
 </main>
 {% endblock content %}

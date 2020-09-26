@@ -9,6 +9,30 @@ main {
   flex: 1;
 }
 
+main .section {
+  padding-top: 0rem;
+  padding-bottom: 5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+main.section {
+  padding-top: 0rem;
+  padding-bottom: 5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+main a {
+  border-radius: 4px;
+  background: rgba(98, 114, 164, 0.2);
+  padding: 0 2px;
+}
+
+main a:hover {
+  background: rgba(98, 114, 164, 0.2);
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -17,12 +41,11 @@ body {
 
 /* Index */
 .intro .about p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
-.intro .about strong {
-  font-size: 50px;
-  font-weight: 900;
+.intro .about li {
+  font-size: 1.3rem;
 }
 
 /* Navbar */
@@ -56,6 +79,10 @@ body {
 /* Projects */
 .tile.is-ancestor {
   flex-wrap: wrap;
+}
+
+.navbar-menu {
+  box-shadow: none !important;
 }
 
 /* Footer */
