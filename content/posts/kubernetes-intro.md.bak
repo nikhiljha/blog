@@ -11,7 +11,7 @@ keywords = "kubernetes, introduction, for beginners"
 
 <img style="max-width: 256px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1234px-Kubernetes_logo_without_workmark.svg.png"></img>
 
-When asked what [Kubernetes](https://k8s.io) is, most people will answer with "a container orchestration system".
+When asked what [Kubernetes](https://k8s.io) is, most people will answer with "a container orchestation system".
 
 This is a good factual statement of the *what*, but it misses the *why* and *how*, which are much more important for developing a good understanding of Kubernetes.
 
@@ -83,7 +83,7 @@ Next we need a way to access the deployment. To do this, we'll use a `Service` a
 
 <center><img src="/images/2020/kubernetes-intro/svc-ingress.svg"></img></center><br/>
 
-The `Service` will point to port `8080` on all `Pod`s that are labeled `app=echo`, and the `Ingress` will route all traffic on `echo.example.com` to the `Service` with the name `echo`.
+The `Service` will point to port `8080` on all `Pod`s that are labelled `app=echo`, and the `Ingress` will route all traffic on `echo.example.com` to the `Service` with the name `echo`.
 
 If we visit `echo.example.com`, we'll see our echo service! Hooray!
 
@@ -99,7 +99,7 @@ The deployment makes two pods!
 
 Now, even if one `Pod` crashes, the other one is still around to serve requests, while the other one restarts! We've successfully deployed Highly Available HTTP Echo™!
 
-Hopefully this gave you a good idea of how to use the various Kubernetes building blocks to define infrastructure.
+Hopefully this gave you a good idea of how to use the various Kubernetes building blocks to define infrastucture.
 
 ## Next Time
 
