@@ -2,7 +2,9 @@
 date = 2017-06-29
 +++
 
-## NEMid | [Post](https://blog.nem.io/nemid/)
+### NEMid
+
+[Post](https://blog.nem.io/nemid/)
 
 Decentralized websites and applications shouldn’t have to rely on usernames and passwords. People forget them and reuse easy to guess passwords across sites, making them insecure. A password manager alleviates some of these problems, but it's difficult to convince people to use them.
 

@@ -2,7 +2,8 @@
 date = 2017-09-14
 +++
 
-## Portola App | [Article](https://portolapilot.com/an-app-to-help-students-portolapp/)
+### Portola App
+[Article](https://portolapilot.com/an-app-to-help-students-portolapp/)
 
 <video preload="auto" autoplay muted="muted" loop="loop" webkit-playsinline="" style="width:100%">
     <source src="/images/projects/ca45clip.mp4" type="video/mp4">

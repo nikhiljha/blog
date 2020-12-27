@@ -8,8 +8,28 @@
 
     <title>{{ page.title }}</title>
     {%- if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-    
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+
+    <!--
+    <meta name="image" content={seo.image} />
+    <link rel="canonical" href={seo.url} />
+    <meta property="og:url" content={seo.url} />
+    <meta property="og:type" content="article" />
+    <meta
+      name="keywords"
+      content={keywords && keywords.length > 0 ? keywords.join(`, `) : ''}
+    />
+    <meta property="og:title" content={seo.title} />
+    <meta property="og:description" content={seo.description} />
+    <meta property="og:image" content={seo.image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content={twitter} />
+    <meta name="twitter:site" content={twitter} />
+    <meta name="twitter:title" content={seo.title} />
+    <meta name="twitter:description" content={seo.description} />
+    <meta name="twitter:image" content={seo.image} />
+    -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark@0.1.0-beta.0/css/bulma-prefers-dark.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/main.css") }}">
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/katex.css") }}">
