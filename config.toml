@@ -20,7 +20,8 @@ highlight_theme = "dracula"
 build_search_index = true
 
 # RSS
-generate_rss = true
+generate_feed = true
+feed_filename = "rss.xml"
 
 [extra]
 # Put all your custom variables here
