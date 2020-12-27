@@ -1,7 +1,12 @@
 +++
 title = "Kubernetes is a container orchestration system, but *that's not the point*."
 template = "post.html"
+description = "The why and how of Kubernetes, instead of the what. A gentle introduction to Kubernetes."
 date = 2020-12-26
+
+[extra]
+image = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1234px-Kubernetes_logo_without_workmark.svg.png"
+keywords = "kubernetes, introduction, for beginners"
 +++
 
 <img style="max-width: 256px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1234px-Kubernetes_logo_without_workmark.svg.png"></img>
