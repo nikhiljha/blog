@@ -1,16 +1,28 @@
 {% extends "page.html" %}
 
+{% block extrahead %}
+<script src="/js/bundle.js"></script>
+{% endblock extrahead %}
+
 {% block content %}
-<main>
-  <div class="main section">
-    <section class="content intro is-medium">
-      <div class="container is-max-desktop">
-        <div class="about">
-          <h1>Hi, I'm Nikhil!</h1>
-          <p>{{ page.content | safe }}</p>
-        </div>
+<main class="main is-flex is-flex-direction-column section">
+  <div class="spacer is-flex-grow-1"></div>
+  <section class="content intro is-medium">
+    <div class="container is-max-desktop is-flex is-align-items-start">
+      <div class="spacer is-flex-grow-1"></div>
+      <div class="biglogo" style="width:15%;">
+        <njha-logo></njha-logo>
       </div>
-    </section>
-  </div>
+      <div class="spacer is-flex-shrink-4 is-flex-grow-0" style="width: 3rem;"></div>
+      <div class="about" style="width:45%;">
+        <h1 class="title is-size-2-desktop is-size-4-touch mb-0 has-text-weight-normal">Hi, I’m Nikhil!</h1>
+        <p class="is-size-6 mb-3">You’ve found my personal website.</p>
+        <p class="is-size-6 mb-3">I’m a student at UC Berkeley, primarily involved in <a href="https://autolab.berkeley.edu">Berkeley AutoLAB</a> and the <a href="https://ocf.berkeley.edu/">Open Computing Facility</a>. This summer, I’m interning at <a href="https://www.onepeloton.com/">Peloton</a>.</p>
+        <p class="is-size-6 mb-0">In addition to this website, I also post things on <a href="https://twitter.com/jhanikhil" rel="me">Twitter</a>.</p>
+      </div>
+      <div class="spacer is-flex-grow-1"></div>
+    </div>
+  </section>
+  <div class="spacer is-flex-grow-3"></div>
 </main>
 {% endblock content %}
