@@ -1,12 +1,15 @@
 +++
 title = "Portola App"
 date = 2017-09-14
+description = "cross-platform Flutter app to navigate the confusing bell schedule at Portola High School"
 
 [extra]
 links = [["Article", "https://portolapilot.com/an-app-to-help-students-portolapp/"]]
+technologies = ["Flutter"]
 media = "/images/projects/ca45clip.mp4"
 media_alt = "animated app screenshot showing the timer on the home page"
 media_type = "video"
+tags = ["Completed"]
 +++
 
 <!-- <video preload="auto" autoplay muted="muted" loop="loop" webkit-playsinline="" style="width:100%">
