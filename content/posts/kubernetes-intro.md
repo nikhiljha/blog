@@ -1,5 +1,5 @@
 +++
-title = "Kubernetes is a container orchestration system, but *that's not the point*."
+title = "Kubernetes is a container orchestration system, but that's not the point."
 template = "post.html"
 description = "The why and how of Kubernetes, instead of the what. A gentle introduction to Kubernetes."
 date = 2020-12-26

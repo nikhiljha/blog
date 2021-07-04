@@ -1,14 +1,18 @@
 +++
+title = "Portola App"
 date = 2017-09-14
+
+[extra]
+links = [["Article", "https://portolapilot.com/an-app-to-help-students-portolapp/"]]
+media = "/images/projects/ca45clip.mp4"
+media_alt = "animated app screenshot showing the timer on the home page"
+media_type = "video"
 +++
 
-### Portola App
-[Article](https://portolapilot.com/an-app-to-help-students-portolapp/)
-
-<video preload="auto" autoplay muted="muted" loop="loop" webkit-playsinline="" style="width:100%">
+<!-- <video preload="auto" autoplay muted="muted" loop="loop" webkit-playsinline="" style="width:100%">
     <source src="/images/projects/ca45clip.mp4" type="video/mp4">
     Your browser does not support this video.
-</video>
+</video> -->
 
 My high school doesn't have bells! As a result, people end up scrambling to class much later than they probably should. Making things worse, every day has a different schedule. We can never quite remember what time class starts.
 
