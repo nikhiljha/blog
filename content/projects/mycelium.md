@@ -1,20 +1,20 @@
 +++
 title = "Mycelium Operator"
 date = 2021-01-07
-description = "a Kubernetes operator to deploy and manage Minecraft servers at scale (no stable release yet, but if you want details or a demo feel free to contact me)"
+description = "a Kubernetes operator to deploy and manage Minecraft servers at scale"
 template = "post.html"
 
 [extra]
-# [["Source Code", "https://github.com/ocf/kubernetes"]]
-technologies = ["Rust", "Kubernetes"]
+links = [["Source Code", "https://github.com/nikhiljha/mycelium"]]
+technologies = ["Rust", "Kubernetes", "Kotlin"]
 +++
 
 ## Installation
 
 ```bash
-helm repo add njha https://charts.njha.dev/
+helm repo add mycelium https://harbor.ocf.berkeley.edu/chartrepo/mycelium
 kubectl create ns mycelium
-helm install -n mycelium njha/mycelium
+helm install mycelium/mycelium -n mycelium
 ```
 
 ## Architecture
@@ -25,66 +25,95 @@ The `MinecraftProxy` object requires a selector to determine which `MinecraftSet
 
 Combined with rollout tools, this allows for highly available proxies that, when a restart is required (by one of your plugins, Mycelium never requires restarts), will (a) spin up a new proxy with the modified configuration (b) disallow players from joining old proxies (c) when the old proxies eventually have 0 players, shut them down.
 
-## Examples
+## Spec
+
+## MinecraftSet
 
 ```yaml
-apiVersion: mycelium.njha.dev/v1alpha1
 kind: MinecraftSet
+apiVersion: mycelium.njha.dev/v1beta1
 metadata:
-  name: survival
+  name: example
   labels:
-    mycelium.njha.dev/proxy: global
-    mycelium.njha.dev/env: production
+    mycelium.njha.dev/proxy: cluster
 spec:
-  # how many servers to make with the same configs
   replicas: 1
-  # currently only paper is supported, so this field is optional
-  type: paper
-  # names of configmaps in the current namespace...
-  # configmaps are (filepath_from_server_root: file content) pairs
-  # if file content is a non-str object, it will be rendered as YAML
-  config:
-    - name: "base-cfg"
-      path: "/"
-    - name: "towny-cfg"
-      path: "/plugins/towny"
-  # URLs of plugins to fetch, also accepts .zip, .tar.zst
-  plugins:
-    - "https://ci.njha.dev/plugin1/latest.jar"
-    - "https://ci.njha.dev/plugin2/latest.jar"
-    - "https://ci.njha.dev/plugin3/2021-01-01-#1.jar"
+  runner: {} # see below
+  container: {} # see below
   proxy:
-    # terra template for the hostname, n = sequential replica number (optional)
-    hostname: "survival-{{ n }}.example.com"
+    # set this to get a forced host
+    hostname: mc.example.com
+    # set this to add to the default try list, lower=closer, ties broken arbitrarily
+    priority: 29
 ```
 
+## MinecraftProxy
+
 ```yaml
-# A set of identical Minecraft server proxies.
-apiVersion: mycelium.njha.dev/v1alpha1
 kind: MinecraftProxy
+apiVersion: mycelium.njha.dev/v1beta1
 metadata:
-  name: global
+  name: proxy
 spec:
-  # how many identical proxies to make
   replicas: 1
-  # currently only velocity is supported, so this field is optional
-  type: velocity
-  # names of configmaps in the current namespace...
-  # configmaps are filepath_from_server_root:file content
-  # if file content is a non-str object, it will be converted to YAML
-  config:
-    - name: "proxy-cfg"
-      path: "/"
-  # URLs of plugins to fetch, also accepts .zip, .tar.zst
-  plugins:
-    - "https://ci.njha.dev/plugin4/latest.jar"
-    - "https://ci.njha.dev/plugin5/latest.jar"
-    - "https://ci.njha.dev/plugin6/2021-01-01-#1.jar"
-  # works like the selector in Job, Deployment, ReplicaSet, and DaemonSet
-  # aka it ANDs together all the labels and expressions
+  # this is a standard selector CRD, but only matchLabels is supported as of v0.4.0
   selector:
     matchLabels:
-      mycelium.njha.dev/proxy: global
-    matchExpressions:
-      - { key: mycelium.njha.dev/env, operator: In, values: [production] }
+      mycelium.njha.dev/proxy: cluster
+  runner: {} # see below
+  container: {} # see below
+```
+
+## Runner
+
+Both `MinecraftSet` and `MinecraftProxy` have an identical `runner` field in the spec. Here's how to use it...
+
+```yaml
+  runner:
+    # information for the papermc api about which jar to get
+    jar:
+      type: paper # must be "paper" for mcset, "velocity" for mcproxy as of mycelium v0.4.0
+      version: 1.18.1 # depends on papermc api
+      build: "114" # depends on papermc api
+    # space separated options to pass to the JVM
+    jvm: "-Xmx1G -Xms1G"
+    # configmaps to mount inside the minecraft root
+    config:
+        # name of configmap to mount
+      - name: "coolplugin-cfg"
+        # location relative to the Minecraft root to mount the configmap
+        path: "/plugins/coolplugin"
+    # URLs of plugins to get
+    plugins:
+      - "https://example.com/coolplugin-v0.1.0.jar"
+```
+
+## Container
+
+Both `MinecraftSet` and `MinecraftProxy` have an identical `container` field in the spec. Here's how to use it...
+
+```yaml
+  container:
+    # standard pod resource requirements definition
+    resources:
+      requests:
+        cpu: "2"
+    # standard node label selector
+    nodeSelector:
+      cool: beans
+    # standard PodSecurityContext
+    securityContext:
+      runAsUser: 1000
+      runAsGroup: 2000
+      fsGroup: 2000
+    # standard VolumeClaimTemplate
+    volumeClaimTemplate:
+      metadata:
+        name: root
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: openebs-zfspv
+        resources:
+          requests:
+            storage: 64Gi
 ```
