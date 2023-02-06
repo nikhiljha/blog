@@ -10,21 +10,15 @@
     {%- if page.description %}
     <meta name="description" content="{{ page.description }}">
     <meta property="og:description" content="{{ page.description }}" />
-    <meta name="twitter:description" content="{{ page.description }}" />
     {% endif %}
     {% block seo %}
     {% endblock seo %}
     <link rel="canonical" href="https://nikhiljha.com{{ current_path }}" />
     <meta property="og:url" content="https://nikhiljha.com{{ current_path }}" />
     <meta property="og:title" content="{{ page.title }}" />
-    <meta name="twitter:title" content="{{ page.title }}" />
-    <meta name="twitter:creator" content="@jhanikhil" />
-    <meta name="twitter:site" content="@jhanikhil" />
     {%- if page.extra.image %}
     <meta name="image" content="{{ page.extra.image }}" />
     <meta property="og:image" content="{{ page.extra.image }}" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="{{ page.extra.image }}" />
     {% endif %}
     {%- if page.extra.keywords %}
     <meta
@@ -33,13 +27,13 @@
     />
     {% endif %}
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark@0.1.0-beta.0/css/bulma-prefers-dark.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/main.css") }}">
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/katex.css") }}">
 
-    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@6.1.1/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@6.1.1/dist/ionicons/ionicons.js"></script>
 
     <script src="/js/nav.js"></script>
     {% block extrahead %}

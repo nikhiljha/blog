@@ -1,5 +1,5 @@
 +++
-title = "Mycelium Operator"
+title = "mycelium operator"
 date = 2021-01-07
 description = "a Kubernetes operator to deploy and manage Minecraft servers at scale"
 template = "post.html"
