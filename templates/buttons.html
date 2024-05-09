@@ -1,0 +1,45 @@
+{% extends "page.html" %}
+
+{% block seo %}
+<meta property="og:type" content="article" />
+{% endblock seo %}
+
+{% block extrahead %}
+<script>
+    // On document load, shuffle the images in id="btn-container"
+    document.addEventListener("DOMContentLoaded", function() {
+        var container = document.getElementById("btn-container");
+        var children = container.children;
+        var childrenArray = Array.prototype.slice.call(children);
+        childrenArray.forEach(function(child) {
+            container.removeChild(child);
+        });
+        childrenArray.sort(function() {
+            return 0.5 - Math.random();
+        });
+        childrenArray.forEach(function(child) {
+            container.appendChild(child);
+        });
+    });
+</script>
+{% endblock extrahead %}
+
+{% block content %}
+<main class="main section">
+  <section class="content container is-medium is-max-desktop">
+    <article class="h-entry">
+      <h1 class="p-name display-title display-title-xxl">{{ page.title }}</h1>
+      {%- if page.description %}<p class="subtitle p-summary">{{ page.description }}</p>{% endif %}
+      <div class="e-content" id="btn-container">
+        <img src="{{ get_url(path="images/buttons/yolkgirl.gif") }}" alt="Trinity" class="is-fullwidth">
+        <img src="{{ get_url(path="images/buttons/ocf.png") }}" alt="OCF" class="is-fullwidth">
+        <img src="{{ get_url(path="images/buttons/michael.gif") }}" alt="Michael" class="is-fullwidth">
+        <img src="{{ get_url(path="images/buttons/jaysa.jpg") }}" alt="Jaysa" class="is-fullwidth">
+        <img src="{{ get_url(path="images/buttons/adym.png") }}" alt="Anna" class="is-fullwidth">
+        <img src="{{ get_url(path="images/buttons/8831.png") }}" alt="8831" class="is-fullwidth">
+        <img src="{{ get_url(path="images/buttons/njha.png") }}" alt="Nikhil" class="is-fullwidth">
+      </div>
+    </article>
+  </section>
+</main>
+{% endblock content %}
