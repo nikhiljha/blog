@@ -24,20 +24,28 @@
 </script>
 {% endblock extrahead %}
 
+{% macro button(image, link, alt) %}
+    <a href="{{ link }}">
+        <img src="{{ get_url(path="images/buttons/" ~ image) }}" alt="{{ alt }}" class="is-fullwidth">
+    </a>
+{% endmacro input %}
+
 {% block content %}
 <main class="main section">
   <section class="content container is-medium is-max-desktop">
     <article class="h-entry">
       <h1 class="p-name display-title display-title-xxl">{{ page.title }}</h1>
       {%- if page.description %}<p class="subtitle p-summary">{{ page.description }}</p>{% endif %}
-      <div class="e-content" id="btn-container">
-        <img src="{{ get_url(path="images/buttons/yolkgirl.gif") }}" alt="Trinity" class="is-fullwidth">
-        <img src="{{ get_url(path="images/buttons/ocf.png") }}" alt="OCF" class="is-fullwidth">
-        <img src="{{ get_url(path="images/buttons/michael.gif") }}" alt="Michael" class="is-fullwidth">
-        <img src="{{ get_url(path="images/buttons/jaysa.jpg") }}" alt="Jaysa" class="is-fullwidth">
-        <img src="{{ get_url(path="images/buttons/adym.png") }}" alt="Anna" class="is-fullwidth">
-        <img src="{{ get_url(path="images/buttons/8831.png") }}" alt="8831" class="is-fullwidth">
-        <img src="{{ get_url(path="images/buttons/njha.png") }}" alt="Nikhil" class="is-fullwidth">
+      <div class="e-content" id="btn-container" style="display: flex; gap: 10px; flex-wrap: wrap;">
+        {{ self::button(image="yolkgirl.gif", link="https://trinityjchung.com", alt="Trinity") }}
+        {{ self::button(image="ocf.png", link="https://ocf.io", alt="OCF") }}
+        {{ self::button(image="michael.gif", link="https://michaellisano.com", alt="Michael") }}
+        {{ self::button(image="jaysa.jpg", link="https://jaysa.net", alt="Jaysa") }}
+        {{ self::button(image="adym.png", link="https://anna.dymchenko.com/", alt="Anna") }}
+        {{ self::button(image="8831.png", link="https://eightyeightthirty.one", alt="8831") }}
+        {{ self::button(image="njha.png", link="https://nikhiljha.com", alt="Nikhil") }}
+        {{ self::button(image="rjz.png", link="https://rjz.lol", alt="Jonathan") }}
+        {{ self::button(image="billmao.jpg", link="https://billmao.net/", alt="Bill") }}
       </div>
     </article>
   </section>
