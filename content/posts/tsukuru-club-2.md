@@ -2,6 +2,9 @@
 title = "\"Smart\": Buzzword Box"
 template = "post.html"
 date = 2019-07-29
+
+[extra]
+stale = false
 +++
 
 This article was originally posted to tsukuru.club, a website I made with [Audrey Xie](https://audreyxie.com/). You can see

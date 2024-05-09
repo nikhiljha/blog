@@ -2,6 +2,9 @@
 title = "Publishing Your Flutter App on F-Droid"
 template = "post.html"
 date = 2018-09-02T18:14:56+00:00
+
+[extra]
+stale = true
 +++
 So you made a Flutter app, and it's open source. Normally the first thing you'd do is upload it to F-Droid - but at first glance, it looks like F-Droid doesn't support Flutter! Luckily the workaround is so easy it doesn't even feel like a workaround.
 

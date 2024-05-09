@@ -2,6 +2,9 @@
 title = "Cool Math Tricks #1: Implicit Derivative"
 template = "post.html"
 date = 2018-09-30T21:07:44+00:00
+
+[extra]
+stale = true
 +++
 So you're in Calculus BC, and you just learned how to find the derivative of a function ($dy/dx$) when the variables aren't isolated. Unfortunately, the "standard" process that is usually taught is, although useful, really slow. Lucky for us, math always has shortcuts. In this post, I will describe a fast shortcut for implicit differentiation.
 

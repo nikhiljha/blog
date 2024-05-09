@@ -2,6 +2,9 @@
 title = "Hello, World!"
 template = "post.html"
 date = 2018-03-01T20:58:45+00:00
+
+[extra]
+stale = true
 +++
 So, it's a blog. Nothing exciting, right?
 

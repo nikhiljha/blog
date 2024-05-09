@@ -7,6 +7,7 @@ date = 2020-12-26
 [extra]
 image = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1234px-Kubernetes_logo_without_workmark.svg.png"
 keywords = "kubernetes, introduction, for beginners"
+stale = false
 +++
 
 <img style="max-width: 256px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1234px-Kubernetes_logo_without_workmark.svg.png"></img>

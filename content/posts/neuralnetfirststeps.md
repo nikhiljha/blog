@@ -2,6 +2,9 @@
 title = 'Neural Networks: First Steps'
 template = "post.html"
 date = 2018-05-02T18:10:54+00:00
+
+[extra]
+stale = false
 +++
 (This is a sequel to my previous post, [Neural Networks: A Baseline](https://nikhiljha.com/2018/01/09/Neural-Networks-A-Baseline/).)
 

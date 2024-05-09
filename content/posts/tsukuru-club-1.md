@@ -2,6 +2,9 @@
 title = "Playing a Rhythm Game on a Real Piano: A Short Project"
 template = "post.html"
 date = 2019-07-13
+
+[extra]
+stale = false
 +++
 
 This article was originally posted to tsukuru.club, a website I made with [Audrey Xie](https://audreyxie.com/). You can see

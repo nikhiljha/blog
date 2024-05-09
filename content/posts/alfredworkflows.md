@@ -2,6 +2,9 @@
 title = "My Alfred Workflows"
 template = "post.html"
 date = 2018-11-04T22:35:44+00:00
+
+[extra]
+stale = true
 +++
 Alfred is a very powerful replacement for Spotlight on MacOS. It's basically an instant terminal that encourages setting aliases for common tasks. Combined with AppleScript on MacOS, nearly everything can be automated. Here are the automations I found most useful in Alfred for both creative and programming work.
 <h2>Alfred Default Settings</h2>

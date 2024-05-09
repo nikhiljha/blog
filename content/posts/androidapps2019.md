@@ -2,6 +2,9 @@
 title = "How to Write Android Apps in 2018"
 template = "post.html"
 date = 2018-08-09T18:11:15+00:00
+
+[extra]
+stale = true
 +++
 I last tried to write an Android app in 2014, and got incredibly confused by things just not working the way I wanted them to. Even an example directly from the documentation wouldn't work as-is, leading to a lot of headaches and blind guessing. On the other side of the fence is iOS development, which was a piece of cake. Swift, although a new language, looked to already have more mature libraries (for certain tasks) than Android did.
 

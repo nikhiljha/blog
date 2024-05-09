@@ -15,6 +15,21 @@
         <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date(format="%h %e, %Y") }}</time> |
         {{ page.reading_time }} minute read
       </p>
+      {% if page.extra.stale %}
+      <article class="message is-warning">
+        <div class="message-header">
+          <p>Stale Article</p>
+        </div>
+        <div class="message-body">
+          This article has been manually reviewed and is considered stale. It may
+          contain outdated information or references, no longer reflect the current
+          views of the author, or be otherwise inaccurate.
+
+          It's preserved here to avoid breaking links, but is probably not worth
+          reading.
+        </div>
+      </article>
+      {% endif %}
       <hr class="divider background-primary">
       <div class="e-content">
         {{ page.content | safe }}

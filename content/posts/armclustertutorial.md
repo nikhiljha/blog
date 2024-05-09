@@ -2,6 +2,9 @@
 title = "ARM Clusters + Selfhosting: A Perfect Match"
 template = "post.html"
 date = 2019-05-01
+
+[extra]
+stale = true
 +++
 
 <img src="/images/2019/ClusterDiagram.svg" alt="Cluster Diagram" class="invert">

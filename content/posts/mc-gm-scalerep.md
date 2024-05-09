@@ -2,6 +2,9 @@
 title = "Building 1:1 Scale Minecraft Replicas with Google Maps"
 template = "post.html"
 date = 2020-04-12T19:52:46+00:00
+
+[extra]
+stale = false
 +++
 
 Note: I tried to write this using the [Hemingway Editor](http://www.hemingwayapp.com/). This is new to me, so my writing may be a bit awkward. I targeted a 6th grade reading level.

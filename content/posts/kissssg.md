@@ -2,6 +2,9 @@
 title = 'KISS SSG: A really simple static site generator.'
 template = "post.html"
 date = 2018-10-17T21:09:55+00:00
+
+[extra]
+stale = true
 +++
 I was recently trying to make a static website. Every existing static site generator that I found wanted to force me to make a blog. I didn't want to make a blog, I just wanted to write markdown and have it turn into a website. (Almost like writing HTML by hand, except I get to write markdown instead.)
 

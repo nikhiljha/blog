@@ -2,6 +2,9 @@
 title = "lol"
 template = "post.html"
 date = 2019-03-26T00:48:36+00:00
+
+[extra]
+stale = true
 +++
 
 <p>To whom it may concern,</p>

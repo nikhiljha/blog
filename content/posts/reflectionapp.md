@@ -2,6 +2,9 @@
 title = 'A Reflection: How to Actually Write Apps'
 template = "post.html"
 date = 2018-08-23T18:12:02+00:00
+
+[extra]
+stale = true
 +++
 So a few days (weeks?) ago I published a very poorly written article about how to write modern Android apps. I was very excited about what Kotlin brought to the table in terms of Android development and wanted to get something out about it. I soon hit roadblock after roadblock of weird legacy quirks with Android and did what any sane person would do - rewrite the app.
 

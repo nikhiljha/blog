@@ -2,6 +2,9 @@
 title = "Attempting to Use LoRaWAN to Make a Cheap Item Tracking System"
 template = "post.html"
 date = 2019-08-08
+
+[extra]
+stale = false
 +++
 
 This article was originally posted to tsukuru.club, a website I made with [Audrey Xie](https://audreyxie.com/). You can see
