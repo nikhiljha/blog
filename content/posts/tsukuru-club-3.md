@@ -4,7 +4,7 @@ template = "post.html"
 date = 2019-08-08
 
 [extra]
-stale = false
+stale = true
 +++
 
 This article was originally posted to tsukuru.club, a website I made with [Audrey Xie](https://audreyxie.com/). You can see
