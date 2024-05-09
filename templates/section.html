@@ -6,8 +6,7 @@
   <section class="content container is-medium is-max-desktop">
     <h1>{{ page.title }}</h1>
 
-    <p>An <a href="{{ get_url(path=" rss.xml") }}">RSS feed</a> is available, or you can <a
-        href="https://hachyderm.io/@njha">follow me on Mastodon</a>. :)</p>
+    <p>An <a href="{{ get_url(path=" rss.xml") }}">RSS feed</a> is available. I haven't written a post in a long time, but maybe one day.</p>
 
     {% for year, posts in section.pages | sort(attribute="date") | reverse | group_by(attribute="year") %}
     <h2>{{ year }}</h2>
@@ -30,10 +29,6 @@
     <h1>projects</h1>
     {% for year, posts in section.pages | sort(attribute="date") | reverse | group_by(attribute="year") %}
     {% for post in posts %}
-    <!-- <li>
-        <a href="{{ post.permalink }}"></a> -
-        
-      </li> -->
     <div class="card">
       <div class="card-content">
         <div class="media mb-3">

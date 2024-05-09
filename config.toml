@@ -5,7 +5,7 @@ base_url = "https://nikhiljha.com"
 
 # The site title, description, etc.; used in RSS by default.
 title = "Nikhil Jha"
-description = "My personal website, contains things."
+description = "This is my website!"
 default_language = "en"
 
 # Whether to automatically compile all Sass files in the sass directory
