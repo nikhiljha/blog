@@ -4,7 +4,7 @@ template = "post.html"
 date = 2018-08-01T18:09:24+00:00
 
 [extra]
-stale = false
+stale = true
 +++
 In order to adequately understand Neural Networks, I need to get a general idea of the tooling people actually use in the real world. No more tutorials providing `helpers.py` files which obfuscate simple tasks. I want to try to use my ability searching and solving problems to get around that instead.
 

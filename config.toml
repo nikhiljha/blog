@@ -17,6 +17,7 @@ build_search_index = true
 # RSS
 generate_feeds = true
 feed_filenames = ["rss.xml"]
+author = "Nikhil Jha"
 
 [markdown]
 smart_punctuation = true

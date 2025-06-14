@@ -4,23 +4,62 @@
 {%- if page.title == "Posts" %}
 <main class="main section">
   <section class="content container is-medium is-max-desktop">
-    <h1>{{ page.title }}</h1>
+    <h1>Works</h1>
 
-    <p>An <a href="{{ get_url(path="rss.xml") }}">RSS feed</a> is available. I haven't written a post in a long time, but maybe one day.</p>
+    <p>An <a href="{{ get_url(path="rss.xml") }}">RSS feed</a> is available, if you want to subscribe.</p>
 
     {% for year, posts in section.pages | filter(attribute="extra.stale", value=false) | sort(attribute="date") | reverse | group_by(attribute="year") %}
     <h2>{{ year }}</h2>
 
     {% for post in posts %}
-    <ul class="listing">
-      <li>
-        <a href="{{ post.permalink }}">{{ post.title }}</a> -
-        <time datetime="{{ post.date }}">{{ post.date | date(format="%h %e, %Y") }}</time>
-      </li>
-    </ul>
+    <div class="box mb-4">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h4 class="title is-5">
+            <a href="{% if post.extra.remote_url %}{{ post.extra.remote_url }}{% else %}{{ post.permalink }}{% endif %}">{{ post.title }}</a>
+          </h4>
+          <p class="subtitle is-6 mb-2">
+            <time datetime="{{ post.date }}">{{ post.date | date(format="%h %e, %Y") }}</time>
+          </p>
+          {% if post.extra.summary %}
+          <p class="content">{{ post.extra.summary }}</p>
+          {% endif %}
+        </div>
+        {% if post.extra.image %}
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="{{ post.extra.image }}" alt="{{ post.title }}">
+          </figure>
+        </div>
+        {% endif %}
+      </div>
+    </div>
     {% endfor %}
 
     {% endfor %}
+
+    {% if false %}
+    {% set stale_posts = section.pages | filter(attribute="extra.stale", value=true) | sort(attribute="date") | reverse %}
+    {% if stale_posts %}
+    <h2>Stale</h2>
+    <p class="content mb-4">These articles have been manually reviewed and are considered stale. They may contain outdated information or references, no longer reflect the current views of the author, or be otherwise inaccurate. They're preserved here to avoid breaking links, but are probably not worth reading.</p>
+    <ul class="listing">
+      {% for post in stale_posts %}
+      <li>
+        <a href="{{ post.permalink }}">{{ post.title }}</a>
+        <span class="tag is-warning is-light ml-2">
+          <span class="icon is-small">
+            <ion-icon name="warning-outline"></ion-icon>
+          </span>
+          <span>stale</span>
+        </span>
+        -
+        <time datetime="{{ post.date }}">{{ post.date | date(format="%h %e, %Y") }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endif %}
   </section>
 </main>
 {% else %}

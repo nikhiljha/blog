@@ -8,6 +8,7 @@ date = 2020-12-26
 image = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1234px-Kubernetes_logo_without_workmark.svg.png"
 keywords = "kubernetes, introduction, for beginners"
 stale = false
+summary = "You may have heard that Kubernetes is a 'container orchestration system'. This is true, but not particularly helpful! In this article I explore why and how Kubernetes is, instead of what. Maybe most surprisingly, I think containers are just an implementation detail of a principled system for declarative infrastructure."
 +++
 
 <img style="max-width: 256px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1234px-Kubernetes_logo_without_workmark.svg.png"></img>
