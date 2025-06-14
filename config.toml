@@ -5,7 +5,7 @@ base_url = "https://nikhiljha.com"
 
 # The site title, description, etc.; used in RSS by default.
 title = "Nikhil Jha"
-description = "This is my website!"
+description = "doing my best ❤️"
 default_language = "en"
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -15,8 +15,8 @@ compile_sass = true
 build_search_index = true
 
 # RSS
-generate_feed = true
-feed_filename = "rss.xml"
+generate_feeds = true
+feed_filenames = ["rss.xml"]
 
 [markdown]
 smart_punctuation = true
