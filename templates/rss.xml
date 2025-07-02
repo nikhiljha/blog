@@ -32,7 +32,7 @@
             {%- endif -%}
           </author>
           <link>{% if page.extra.remote_url %}{{ page.extra.remote_url | escape_xml | safe }}{% else %}{{ page.permalink | escape_xml | safe }}{% endif %}</link>
-          <guid>{{ page.permalink | escape_xml | safe }}</guid>
+          <guid>{% if page.extra.remote_url %}{{ page.extra.remote_url | escape_xml | safe }}{% else %}{{ page.permalink | escape_xml | safe }}{% endif %}</guid>
           <description xml:base="{% if page.extra.remote_url %}{{ page.extra.remote_url | escape_xml | safe }}{% else %}{{ page.permalink | escape_xml | safe }}{% endif %}">{% if page.extra.summary %}{{ page.extra.summary }}{% else %}{{ page.content }}{% endif %}</description>
       </item>
       {%- endfor %}

@@ -17,6 +17,14 @@
         <div class="column">
           <h4 class="title is-5">
             <a href="{% if post.extra.remote_url %}{{ post.extra.remote_url }}{% else %}{{ post.permalink }}{% endif %}">{{ post.title }}</a>
+            {% if post.extra.remote_url %}
+            <span class="tag is-success is-light ml-2" style="vertical-align: middle; margin-top: -2px;">
+              <span class="icon is-small">
+                <ion-icon name="open-outline"></ion-icon>
+              </span>
+              <span>external post</span>
+            </span>
+            {% endif %}
           </h4>
           <p class="subtitle is-6 mb-2">
             <time datetime="{{ post.date }}">{{ post.date | date(format="%h %e, %Y") }}</time>
